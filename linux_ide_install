@@ -40,6 +40,10 @@ To look like this:
 
 extension=mysql.so
 
+mysq workbench: (adatbázis szerkezet létrehozása)
+https://community.linuxmint.com/software/view/mysql-workbench
+az eredeti oracles verziónak valami függúségi gondja van.
+
 PHPMYADMIN----------------------------------------------------------------
 
 apt-get install phpmyadmin 
