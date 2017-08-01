@@ -1,7 +1,15 @@
 install telepítő letölt (.deb) rákattint.
 a githez nem kell semmilyen kiegészítő
  de a commit a balsáv ttején lévő kis pipával ,
- csak rendszergazdaként működik .() Rendszergazdaként viszont nem érdemes elindítani
- mert a file jogosultságokat összezavarja.
- Inkább a parancssorban :
+ csak rendszergazdaként működik .(Error Git: Failed to execute git) 
+ Rendszergazdaként viszont nem érdemes elindítani, mert a file jogosultságokat összezavarja.
+ 
+ első megoldás parancssor :
  sudo git commit -m 'dolgozo kesz'
+ git push
+
+második megoldás A VS-ben is be kell mutatkozni a gitnek:
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+git push A GitHub extensionnal be lehet állítani personal acces tokent. így nem kéri mindig a felhasználó nevet és a jelszót.
+gfuigiugzuuz
