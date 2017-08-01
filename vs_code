@@ -11,5 +11,12 @@ a githez nem kell semmilyen kiegészítő
 második megoldás A VS-ben is be kell mutatkozni a gitnek:
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
+ha már az első megoldást alkalmaztuk akkor hiba lehet:
+Git: fatal: could not open '.git/COMMIT_EDITMSG': Permission denied
+(pl. ezért nem szabad rendszergazdaként használni a VS-t)
+
+ vissza kell állítani a jogosultságot: (755 elég)
+ sudo chmod -R 777 /var/www/
+
 git push A GitHub extensionnal be lehet állítani personal acces tokent. így nem kéri mindig a felhasználó nevet és a jelszót.
 gfuigiugzuuz
