@@ -1,0 +1,7 @@
+install telepítő letölt (.deb) rákattint.
+a githez nem kell semmilyen kiegészítő
+ de a commit a balsáv ttején lévő kis pipával ,
+ csak rendszergazdaként működik .() Rendszergazdaként viszont nem érdemes elindítani
+ mert a file jogosultságokat összezavarja.
+ Inkább a parancssorban :
+ sudo git commit -m 'dolgozo kesz'
