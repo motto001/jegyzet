@@ -21,3 +21,27 @@ public function boot()
 {
     Schema::defaultStringLength(191); //200 nemjó!
 }
+
+CORS----------------------------------------------------------------
+
+php artisan make:middleware Cors
+app/http/middleware/cors.php
+
+public function handle($request, Closure $next)
+    {
+       header("Access-Control-Allow-Origin: *");
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With');
+        header('Access-Control-Allow-Credentials: true');
+
+        if (!$request->isMethod('options')) {
+                return $next($request);
+        }
+    }
+    
+ /app/Http/Kernel.php 
+ 
+ protected $middleware = [
+ ..............
+    \App\Http\Middleware\Cors::class,
+    ]
