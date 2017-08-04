@@ -44,4 +44,6 @@ public function handle($request, Closure $next)
  protected $middleware = [
  ..............
     \App\Http\Middleware\Cors::class,
+     \App\Http\Middleware\VerifyCsrfToken::class,   //utána legyen
+        \App\Http\Middleware\VerifyApiKey::class,   //utána legyen
     ]
