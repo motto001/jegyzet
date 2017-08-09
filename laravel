@@ -22,6 +22,9 @@ public function boot()
     Schema::defaultStringLength(191); //200 nemjó!
 }
 
+SERVER LEÁLLÍTÁS LINUXONN (8000-ES PORT FELSZABADÍTÁSA)--------------------------
+Sudo kill $(sudo lsof -t -i:8000)
+
 CORS----------------------------------------------------------------
 
 php artisan make:middleware Cors
