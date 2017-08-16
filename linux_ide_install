@@ -87,7 +87,7 @@ frissítés: composer self-update
 GIT----------------------------------------------------------------
 
 apt-get install git
-git congig --global user.name "motto001"
+git config --global user.name "motto001"
 git config --global user.email "motto001@gmail.com"
 Nem kell git init remote stb.ha clónozzuk a repositorit (ajánlatos akár üres könyvtárat is és belemásolni ha már vannak készen fájlok)
 a visual studiót rendszergazdaként kell elindítani különben git not installed hibaüzenet.
