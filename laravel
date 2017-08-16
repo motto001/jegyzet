@@ -50,3 +50,9 @@ public function handle($request, Closure $next)
      \App\Http\Middleware\VerifyCsrfToken::class,   //utána legyen
         \App\Http\Middleware\VerifyApiKey::class,   //utána legyen
     ]
+ CRUD generator-----------------------------------------------------
+ 
+ https://github.com/appzcoder/crud-generator
+ composer require appzcoder/crud-generator --dev
+ 
+   https://github.com/appzcoder/laravel-admin  // a generatort használó admin panel 
