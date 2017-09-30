@@ -56,3 +56,28 @@ public function handle($request, Closure $next)
  composer require appzcoder/crud-generator --dev
  
    https://github.com/appzcoder/laravel-admin  // a generatort használó admin panel 
+   
+ Messagebag hiba:--------------------------------------------------------
+ https://laravel.com/docs/5.4/validation#working-with-error-messages
+ App/Http/Controllers/controller.php  :
+ 
+namespace App\Http\Controllers;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+
+abstract class Controller extends BaseController
+{
+    use DispatchesJobs, ValidatesRequests;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function formatValidationErrors(Validator $validator)
+    {
+        return $validator->errors()->all();
+    }
+}
+ 
+   
