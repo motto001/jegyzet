@@ -1,0 +1,44 @@
+
+alapbeállítás
+ git config --global user.email "you@example.com"
+ git config --global user.name "Your Name"
+ha linux alatt rendszergazdaként használtuk a vs Git: fatal: could not open '.git/COMMIT_EDITMSG': Permission denied hiba lehet
+ vissza kell állítani a jogosultságot: (755 elég)
+ sudo chmod -R 777 /var/www/
+
+új mappa feltöltése a repoba
+git init
+git add .  // a pont mindent hozzáad kell ha csak redme van elég :git add README.md 
+ha kihagygjuk:
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/ottomenku/mocontroller.git'
+
+git commit -m "initial commit"
+git remote add origin https://github.com/ottomenku/mocontroller.git
+git push -u origin master
+
+
+ github fiók váltás ha credential managert használunk
+
+
+git config --global --unset credential.helper  // lehet hogyí ez is kell de ez még kevés
+ezek kellenek:
+git config --global credential.helper manager
+git config --global credential.useHttpPath true
+// ezek után bekérte a felhasználó nevet és a jelszót GIT bashban működött de valszeg a VS-ben powershellben is jó
+utána működnek a github új repositoriban leírt lépoések:
+ 
+echo "# mocontroller" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ottomenku/mocontroller.git
+git push -u origin master
+…or push an existing repository from the command line
+ 
+git remote add origin https://github.com/ottomenku/mocontroller.git
+git push -u origin maste
+
+
+
+
