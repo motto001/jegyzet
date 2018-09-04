@@ -20,3 +20,25 @@ Git: fatal: could not open '.git/COMMIT_EDITMSG': Permission denied
 
 git push A GitHub extensionnal be lehet állítani personal acces tokent. így nem kéri mindig a felhasználó nevet és a jelszót.
 gfuigiugzuuz
+
+vs code github fiók váltás:
+
+// lehet hogyí ez is kell de ez még kevés
+git config --global --unset credential.helper
+
+// ezek után bekérte a felhasználó nevet és a jelszót GIT bashban működött de valszeg a VS-ben powershellben is jó
+git config --global credential.helper manager
+git config --global credential.useHttpPath true
+
+utána működnek a github új repositoriban leírt lépoések:
+ 
+echo "# mocontroller" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ottomenku/mocontroller.git
+git push -u origin master
+…or push an existing repository from the command line
+ 
+git remote add origin https://github.com/ottomenku/mocontroller.git
+git push -u origin maste
