@@ -1,0 +1,6 @@
+composer dump-autoload
+composer dump-autoload  -o
+composer refress
+composer remove barryvdh/laravel-dompdf
+composer require --dev laravel/dusk
+composer update
