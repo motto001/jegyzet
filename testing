@@ -1,0 +1,19 @@
+
+//laravel phpunitja---------------------------
+./vendor/bin/phpunit
+./vendor/bin/phpunit --env=ttt
+./vendor/bin/phpunit --testsuite Unit
+./vendor/bin/phpunit --testsuite Unit Tests
+./vendor/bin/phpunit --testsuite Unit,env=ttt
+./vendor/bin/phpunit vendor\dragonmantank\cron-expression\tests\Cron\DayOfMonthFieldTest.php
+// global pl.pear csomagból------------------------------
+phpunit 
+phpunit --testsuite Unit Tests
+phpunit /TestCase
+phpunit /tests/TestCase
+//böngésző test---------------------------------
+php artisan dusk:make LoginTest // test készítés
+
+php artisan dusk 
+php artisan dusk tests/Browser/LoginAndRolesTest.php
+./vendor/bin/phpunit vendor\dragonmantank\cron-expression\tests\Cron\DayOfMonthFieldTest.php
