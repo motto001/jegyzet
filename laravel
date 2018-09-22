@@ -4,8 +4,8 @@ composer create-project --prefer-dist laravel/laravel noregapp
 AUTH----------------------------------------
 php artisan make:auth  
 php artisan migrate
-
-hiba:
+***************************************************************
+hibák:
 
   [Illuminate\Database\QueryException]
   SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was
@@ -16,12 +16,16 @@ javítás:
 
 app/Providers/AppServiceProvider.php
 
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Schema; //névtér nem trait osztály előtt legyen
 public function boot()
 {
     Schema::defaultStringLength(191); //200 nemjó!
 }
+---------------------------------------------
+Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails
+seddelésnél ha még nincs meg az a kuollcs amit be akarunk szúrni előbb seedelni kell a child táblát
 
+************************************************************************************************
 SERVER LEÁLLÍTÁS LINUXONN (8000-ES PORT FELSZABADÍTÁSA)--------------------------
 Sudo kill $(sudo lsof -t -i:8000)
 
