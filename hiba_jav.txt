@@ -1,0 +1,9 @@
+Laravel:
+Vite manifest not found at: /var/www/html/laravelapp/public/build/manifest.json
+megoldás: npm run build
+
+Az auth telepítése után login linkre kattintva  address vagy file not found hiba másnap jó volt. gyorsító tár törlés vagy apache ujraindíítás 
+de lehet hogy erre is az npm run build a megoldás
+
+composert nem szabad sudo-val futtatni inkább adjunk 777-es jogot a konyvtárnak
+sudo chmod -R 777 laravelapp/
